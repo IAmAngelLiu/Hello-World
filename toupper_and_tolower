@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+	char a[1000] = {0};
+	char c[1000] = {0};
+	cin.getline(a,1000);
+	
+	for(int i = 0; i < 1000; i++)
+	{
+		if(a[i] != '\0')
+		{
+			if(a[i] == ' ')
+			{
+				c[i+1] = toupper(a[i+1]);
+			}
+			else
+			{
+				c[i+1] = tolower(a[i+1]);
+			}
+		}
+	}
+	c[0] = toupper(a[0]);
+	cout << c;
+	
+	return 0;
+}
